@@ -18,7 +18,7 @@ export default {
 
         if (textContent.value.length > 10) {
           stop();
-                  //  watchEffect will be called every time the value of textContent changes util unmounted.
+          //  watchEffect will be called every time the value of textContent changes util unmounted.
           //but if you want to stop sooner
           // watchEffect return stop function so I set a stop variable to call stop function.
           //notice when you stop watchEffect ,it will stop and never run again when text content change is back to 10 
