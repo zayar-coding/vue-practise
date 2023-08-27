@@ -2,6 +2,8 @@
   
   <p v-font-size:small>Small</p>
     <p v-font-size:medium>Small</p>
+
+    
   <a :href="githubLink">My Github Link using global mixins</a>
   
     <p v-font-size:large>Small</p>

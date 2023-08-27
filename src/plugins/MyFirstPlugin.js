@@ -6,21 +6,36 @@ export default {
     //so when you use it, you don't need to import it just write my-header
 
     //global directive 
-    app.directive("font-size", (el, binding, vnode) => {
-      var size = 16;
-      switch (binding.arg) {
-        case "small":
-          size = options.fontSize.small; //Passing customizable options to  our plugin from main.js
-          break;
-        case "large":
-          size = options.fontSize.large;
-          break;
-        default:
-          size = options.fontSize.medium;
-          break;
-      }
-      el.style.fontSize = size + "px";
-    })
+    app.directive("font-size",
+      (el, binding, vnode) => {
+        var size = 16;
+        switch (binding.arg) {
+          case "small":
+            size = options.fontSize.small; //Passing customizable options to  our plugin from main.js
+            break;
+          case "large":
+            size = options.fontSize.large;
+            break;
+          default:
+            size = options.fontSize.medium;
+            break;
+        }
+        el.style.fontSize = size + "px";
+/*
+if you want to add modifier, you can use binding.modifiers.arguName
+<h1 v-font-size:small></h1>
+if(binding.modifiers.small) {
+  size=8
+}
+
+if you want to add value, you can use binding.value
+<h1 v-font-size="8"></h1>
+if(binding.value) {
+  or
+<h1 v-font-size="{name:"zayar",size:8}"></h1>
+if(binding.value.size) {
+
+*/})
     // When you use global directive in component, it names start with v-font-size:argumentName
     //eg v-font-size:small
     app.mixin({
