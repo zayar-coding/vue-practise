@@ -8,6 +8,9 @@
       title="Test" msg="doesn't it work?"/>
     </div>
     </teleport>
+    <!-- 
+      data passing using teleport 
+     -->
   </div>
 </template>
 

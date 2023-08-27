@@ -9,17 +9,30 @@ const router = createRouter({
     {
       path: '/keepalive',
       name: 'KeepAlive',
-      component: KeepAlivePage
+      component: KeepAlivePage,
+
+      meta: {
+        enterClass: "animate__animated animate__fadeInLeft",
+        leaveClass: "animate__animated animate__fadeOutLeft"
+      }
     },
     {
       path: '/watcheffect',
       name: 'watchEffect',
-      component: WatchEffectPage
+      component: WatchEffectPage,
+      meta: {
+        enterClass: "animate__animated animate__fadeInLeft",
+        leaveClass: "animate__animated animate__fadeOutLeft"
+      }
     },
     {
       path: '/firstplugin',
       name: 'FirstPlugin',
-      component: FirstPluginPage
+      component: FirstPluginPage,
+      meta: {
+        enterClass: "animate__animated animate__fadeInLeft",
+        leaveClass: "animate__animated animate__fadeOutLeft"
+      }
     }
   ]
 })
