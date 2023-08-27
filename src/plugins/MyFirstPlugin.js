@@ -23,6 +23,23 @@ export default {
     })
     // When you use global directive in component, it names start with v-font-size:argumentName
     //eg v-font-size:small
+    app.mixin({
+      data() {
+        return {
+          githubLink: "https://github.com/zayarmyooo19"
+        }
+      },
+      created() {
+        console.log("Printing from created")
+      }
+    })//when you created global mixins like this , it will effect any component in you will 
+    //eg you go home.page and also created() is run
+
+    const logout = () => {
+      console.log("logout from plugin");
+    }
+    app.provide("logout", logout); //using app.provide, you can have logout method any components
+
   }
 }
 
@@ -31,6 +48,6 @@ export default {
 2. global css in global component
 3. global directive
 4. Passing customizable options to  our plugin from main.js
-5.global mixins to add component functionality 
-
+5.global mixins to add component functionality
+6. global provide to share data between components
 */

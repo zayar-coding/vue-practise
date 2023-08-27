@@ -1,21 +1,22 @@
 <template>
+  
   <p v-font-size:small>Small</p>
     <p v-font-size:medium>Small</p>
-
+  <a :href="githubLink">My Github Link using global mixins</a>
+  
     <p v-font-size:large>Small</p>
     <my-header>
       <template #title>
           This is First Plugins
         </template>
-    </my-header>  
+    </my-header>   
+    <button @click="logout">Logout</button> 
 </template>
 
-<script>
+<script setup>
+import { inject } from 'vue'
+ const logout = inject('logout');
 
-export default {
-
-  
-}
 </script>
 
 <style>
