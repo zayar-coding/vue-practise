@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import KeepAlivePage from '../views/KeepAlivePage.vue'
 import WatchEffectPage from '../views/WatchEffectPage.vue'
 import FirstPluginPage from '../views/FirstPluginPage.vue'
+import InfinityScrollPage from '../views/InfinityScrollPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,6 +30,15 @@ const router = createRouter({
       path: '/firstplugin',
       name: 'FirstPlugin',
       component: FirstPluginPage,
+      meta: {
+        enterClass: "animate__animated animate__fadeInLeft",
+        leaveClass: "animate__animated animate__fadeOutLeft"
+      }
+    },
+    {
+      path: '/infinityscroll-post',
+      name: 'InfinityScroll',
+      component: InfinityScrollPage,
       meta: {
         enterClass: "animate__animated animate__fadeInLeft",
         leaveClass: "animate__animated animate__fadeOutLeft"

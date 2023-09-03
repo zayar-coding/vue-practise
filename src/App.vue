@@ -1,15 +1,11 @@
 <script setup>
-
 import NotiHandler from './components/NotiHandler.vue';
-
-
-
 </script>
 <template>    
       <router-link to="/watcheffect">WatchEffect</router-link>
       <router-link to="/keepalive">KeepAlive</router-link>
-      <router-link to="/firstplugin">FirstPluginPage</router-link>  
-      
+      <router-link to="/firstplugin">FirstPluginPage</router-link>        
+      <router-link to="/infinityscroll-post">InfinityScrollPage</router-link>  
   <router-view v-slot="{ Component,route }" >
     <Transition
     :enter-active-class="route.meta.enterClass"
@@ -34,7 +30,6 @@ import NotiHandler from './components/NotiHandler.vue';
 
   }
   .page{
-    
     position:absolute;
     top: 30px;
   }
