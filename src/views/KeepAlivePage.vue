@@ -2,14 +2,15 @@
   <div>
       <h2>Keep Alive</h2>
     <Tabs/>
-    </div>
+    </div>    
 </template>
 
 <script>
 import Tabs from '../components/KeepAlive/Tabs.vue';
 
+
 export default {
-    components: { Tabs }
+    components: { Tabs}
 }
 </script>
 

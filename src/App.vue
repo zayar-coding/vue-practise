@@ -2,10 +2,15 @@
 import NotiHandler from './components/NotiHandler.vue';
 </script>
 <template>    
+      <NotiHandler/> 
       <router-link to="/watcheffect">WatchEffect</router-link>
       <router-link to="/keepalive">KeepAlive</router-link>
       <router-link to="/firstplugin">FirstPluginPage</router-link>        
-      <router-link to="/infinityscroll-post">InfinityScrollPage</router-link>  
+      <router-link to="/infinityscroll-post">InfinityScroll(Manual)</router-link>  
+      <router-link to="/vueuse-impl">VueUseImplmentation</router-link>  
+      <router-link to="/intersection-observer">IntersectionObserver</router-link>  
+      <router-link to="/auto-animate">AutoAnimateLibrary</router-link>  
+     
   <router-view v-slot="{ Component,route }" >
     <Transition
     :enter-active-class="route.meta.enterClass"
@@ -14,7 +19,7 @@ import NotiHandler from './components/NotiHandler.vue';
     <component :is="Component" />
     </Transition>
   </router-view>
-  <NotiHandler/>
+  
 </template>
 
 <style scoped>
