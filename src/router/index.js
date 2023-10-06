@@ -6,6 +6,7 @@ import InfinityScrollPage from '../views/InfinityScrollPage.vue'
 import VueUseImplPage from '../views/VueUseImplPage.vue'
 import IntersectionPage from '../views/IntersectionPage.vue'
 import AnimatedLibraryPage from "../views/AnimatedLibraryPage.vue"
+import ItemList from '../components/Vuex/ItemList.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -67,6 +68,15 @@ const router = createRouter({
       path: '/auto-animate',
       name: 'AutoAnimate',
       component: AnimatedLibraryPage,
+      meta: {
+        enterClass: "animate__animated animate__fadeInLeft",
+        leaveClass: "animate__animated animate__fadeOutLeft"
+      }
+    },
+    {
+      path: '/vuex-item',
+      name: 'ItemList',
+      component: ItemList,
       meta: {
         enterClass: "animate__animated animate__fadeInLeft",
         leaveClass: "animate__animated animate__fadeOutLeft"

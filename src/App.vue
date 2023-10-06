@@ -28,7 +28,7 @@ const changeLang = () => {
       <router-link to="/vueuse-impl">{{ VueUseImplmentation }}</router-link>  
       <router-link to="/intersection-observer">{{ IntersectionObserver }}</router-link>  
       <router-link to="/auto-animate">{{ AutoAnimateLibrary }}</router-link>  
-      <!-- <router-link to="/vuex">Vuex</router-link> -->
+      <router-link to="/vuex-item">Vuex-Item</router-link>
   </div>
      
   <router-view v-slot="{ Component,route }" >
