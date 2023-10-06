@@ -4,8 +4,23 @@ import App from './App.vue'
 import router from './router'
 import MyFirstPlugin from './plugins/MyFirstPlugin'
 import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
+import { createI18n } from 'vue-i18n'
+import enMessage from "@/locales/en.json"
+import jpMessage from "@/locales/jp.json"
+
+const i18n = createI18n({
+  locale: 'en',
+  allowComposition: true, //!you need to specify that!
+  messages: {
+    en: enMessage,
+    jp: jpMessage
+  }
+})
+
+
 const app = createApp(App)
 app.use(router)
+app.use(i18n)
 app.use(MyFirstPlugin, {
   fontSize: {
     small: 12,

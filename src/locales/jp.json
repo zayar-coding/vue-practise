@@ -1,0 +1,17 @@
+{
+  "Open": "開ける",
+  "Test doesn't it work?": "テストはうまくいきませんか？",
+  "Close": "近い",
+  "WatchEffect ": "ウォッチエフェクト",
+  "Vue watchEffect Tutorial ": "Vue watchEffect チュートリアル",
+  "Zayar is typing ": "ザヤールさんが入力中",
+  "Keep Alive": "キープアライブコンポーネント",
+  "About": "について",
+  "Hello From the About Page": "こんにちは「About」ページから「お問い合わせ」",
+  "Send": "送信",
+  "FirstPluginPage": "最初のプラグインページ",
+  "VueUseImplmentation": "Vueの使用実装",
+  "IntersectionObserver": "交差点観察者",
+  "AutoAnimateLibrary": "自動アニメーションライブラリ",
+  "InfinityScroll": "インフィニティスクロール"
+}

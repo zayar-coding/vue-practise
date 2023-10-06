@@ -1,15 +1,35 @@
 <script setup>
+import { ref } from 'vue';
 import NotiHandler from './components/NotiHandler.vue';
+import { useLocalization } from './composables/useLocalization';
+const { AutoAnimateLibrary, FirstPluginPage,
+  IntersectionObserver, KA, tdiw, VueUseImplmentation, WatchEffect,InfinityScroll,
+  changeLocale
+} = useLocalization();
+const def = ref(true);
+const changeLang = () => {
+  def.value = !def.value;
+  changeLocale(def.value ? 'en' : 'jp');
+};
 </script>
 <template>    
-      <NotiHandler/> 
-      <router-link to="/watcheffect">WatchEffect</router-link>
-      <router-link to="/keepalive">KeepAlive</router-link>
-      <router-link to="/firstplugin">FirstPluginPage</router-link>        
-      <router-link to="/infinityscroll-post">InfinityScroll(Manual)</router-link>  
-      <router-link to="/vueuse-impl">VueUseImplmentation</router-link>  
-      <router-link to="/intersection-observer">IntersectionObserver</router-link>  
-      <router-link to="/auto-animate">AutoAnimateLibrary</router-link>  
+      <NotiHandler/>
+      <button @click="changeLang">
+      <p v-if="def">Switch to Japan</p>
+      <p v-else>Switch to  English</p>
+      </button>
+      <div>
+      <router-link to="/watcheffect">{{ WatchEffect }}</router-link>
+      <router-link to="/keepalive">{{ KA }}</router-link>
+      <router-link to="/firstplugin">{{ FirstPluginPage }}</router-link>        
+      <router-link to="/infinityscroll-post">{{InfinityScroll}}(Manual)</router-link>  
+      </div>
+      <div>
+      <router-link to="/vueuse-impl">{{ VueUseImplmentation }}</router-link>  
+      <router-link to="/intersection-observer">{{ IntersectionObserver }}</router-link>  
+      <router-link to="/auto-animate">{{ AutoAnimateLibrary }}</router-link>  
+      <!-- <router-link to="/vuex">Vuex</router-link> -->
+  </div>
      
   <router-view v-slot="{ Component,route }" >
     <Transition
